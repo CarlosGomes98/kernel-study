@@ -1,0 +1,5 @@
+.venv
+*.nsys-rep
+*.sqlite
+*.ncu-rep
+build
