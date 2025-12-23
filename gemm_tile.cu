@@ -52,8 +52,8 @@ __global__ void kernel(float *A, float *B, float *O, int H, int W, int K)
         
         __syncthreads();
 
-        for (int k = 0; k < BLOCK_SIZE; k++) {
-            tmp += tileA[threadIdx.y * BLOCK_SIZE + k] * tileB[k*BLOCK_SIZE + threadIdx.x];
+        for (int dp = 0; dp < BLOCK_SIZE; dp++) {
+            tmp += tileA[threadIdx.y * BLOCK_SIZE + dp] * tileB[dp*BLOCK_SIZE + threadIdx.x];
         }
         __syncthreads();
     
