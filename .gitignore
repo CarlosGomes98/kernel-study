@@ -2,4 +2,9 @@
 *.nsys-rep
 *.sqlite
 *.ncu-rep
-build
+build/
+benchmark
+gemm_naive
+gemm_tile
+gemm_tile_compute
+matrixValidationFailure.txt
